@@ -1,0 +1,141 @@
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Верхняя часть */
+  .upFooter {
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Навигация в верхней части */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  nav ul li:hover {
+    color: #3498db;
+  }
+  
+  /* Средняя часть: заголовки и соцсети или контакты */
+  .middleFooter {
+    margin: 20px 0;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .middleFooter h1 {
+    font-size: 2em;
+    margin: 10px 0;
+  }
+  .middleFooter ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .middleFooter ul li {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .middleFooter ul li:hover {
+    color: #3498db;
+  }
+  
+  /* Нижняя часть */
+  .downFooter {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .downFooter ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .downFooter ul li {
+    margin: 8px 20px;
+  }
+  .downFooter ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  .downFooter ul li a:hover {
+    color: #3498db;
+  }
+  
+  /* Адаптивность */
+  @media(max-width: 768px) {
+    footer {
+      padding: 15px 10px;
+    }
+  
+    /* Верхняя часть — центрировано, элементов может стать меньше */
+    
+    nav ul {
+        margin-right: 6vw;
+    }
+    nav ul li {
+      margin: 0 vw;
+      font-size: 1.1rem;
+    }
+  
+    /* Средняя часть — тоже в колонку, центрировать */
+    .middleFooter {
+      align-items: center;
+    }
+    .middleFooter h1 {
+      font-size: 1.5em;
+    }
+    .middleFooter ul {
+      justify-content: center;
+    }
+    .middleFooter ul li {
+      margin: 8px;
+      font-size: 1rem;
+    }
+  
+    /* Нижняя часть — тоже в колонку */
+    .downFooter {
+      flex-direction: column;
+      align-items: center;
+    }
+    .downFooter ul {
+      justify-content: center;
+    }
+    .downFooter ul li {
+      margin: 8px 12px;
+    }
+  }
+  

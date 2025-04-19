@@ -1,0 +1,99 @@
+/* Стиль для header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #282c34; /* Цвет фона */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.container {
+  display: flex;
+}
+
+/* Заголовок */
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+nav {
+  align-items: end;
+  justify-content: right;
+  justify-items: right;
+}
+
+/* Список навигации */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 50 px 0 px;
+  padding: 0;
+}
+
+/* Ссылки навигации */
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+/* Медиазапрос для мобильных и планшетов */
+@media(max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .container {
+    display: flex;
+  }
+
+  /* Заголовок сверху, чуть больше */
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* Меню — вертикальное, занимает всю ширину */
+  nav ul {
+    float: right;
+    width: 70%;
+    justify-items: flex-end;
+  }
+
+  /* Элементы меню — растянуты по ширине, с отступами */
+  nav li {
+    margin: 40vw;
+    width: 100%;
+  }
+
+  /* Ссылки — растянуты, чтобы было удобно нажимать */
+  nav a {
+    display: flex;
+    justify-self: start;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  /* Можно добавить эффект для активной кнопки */
+  nav a.active,
+  nav a:hover {
+    background-color: #61dafb;
+    color: #282c34;
+  }
+}

@@ -1,0 +1,263 @@
+/* Основной контейнер */
+.mainContainer {
+    display: flex;
+    background-color: #3a3a3a; 
+    height: auto; 
+    width: 100%;
+    flex-wrap: nowrap; /* по умолчанию не переносим, чтобы было в два столбца */
+  }
+  
+  /* Блок с изображением */
+  .blockImg {
+    padding: 0;
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 300px;
+    position: relative;
+  }
+  
+  /* Изображение */
+  .blockImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Не меняем, оставляем как есть для десктопа */
+  }
+  
+  /* Блок с текстом */
+  .mainText {
+    margin-left: 5vw;
+    flex: 2; /* занимает большую часть */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 15vh;
+    position: relative; /* чтобы можно было делать фон прозрачным */
+    background-color: transparent; /* по умолчанию прозрачный фон */
+    z-index: 2;
+  }
+  
+  /* Заголовки и список */
+  .mainText h1 {
+    font-size: 3.5rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+  
+  .mainText h3 {
+    width: 50%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #add8e6;
+  }
+  
+  .mainText ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 6vh;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .mainText ul li p {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: #ffffff;
+  }
+  
+  /* Кнопка */
+  .mainText button {
+    width: 30%;
+    background-color: #4b9cd3;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mainText button:hover {
+    background-color: #357abf;
+  }
+  
+  /* Адаптация для мобильных устройств */
+  @media (max-width: 768px) {
+    .mainContainer {
+      flex-direction: column;
+      height: 82vh;
+      /* высота под контент */
+    }
+  
+    /* Сделать изображение фоном */
+    .blockImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* чтобы было позади текста */
+      overflow: hidden;
+    }
+  
+    /* Сделать изображение прозрачным и покрывать весь фон */
+    .blockImg img {
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.3; /* прозрачность для фона */
+    }
+  
+    /* Основной блок с текстом поверх изображения */
+    .mainText {
+      position: relative;
+      background-color: rgba(58, 58, 58, 0.7); /* полупрозрачный фон для читаемости */
+      margin: 0; /* убрать отступы */
+      margin-top: 0;
+      padding: 20px;
+      z-index: 2; /* поверх изображения */
+    }
+  
+    /* Увеличить размер шрифтов для мобильных */
+    .mainText h1 {
+      font-size: 2rem;
+    }
+    .mainText h3 {
+      font-size: 1.2rem;
+    }
+  
+    /* Кнопка растягивается на всю ширину */
+    .mainText button {
+      width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+  
+
+/* Основной контейнер — флекс, с переносом элементов на меньших экранах */
+/* Основной контейнер — горизонтальный с гибким расположением */
+/* Основной контейнер */
+.mainContainerSecond {
+    display: flex;
+    background-color: #434343; /* серый фон */
+    min-height: 95vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  
+  /* Блок с изображением */
+  .middleImg {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    min-height: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .middleImg:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+  .middleImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Блок с текстом */
+  .listForSecond {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    min-width: 250px;
+  }
+  
+  /* Список */
+  .listForSecond ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .listForSecond ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .listForSecond ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #4b9cd3;
+  }
+  .listForSecond ul li p {
+    margin: 0;
+  }
+  
+  /* Медиазапросы для мобильных устройств */
+  @media(max-width: 768px) {
+    /* Расположить изображение слева, а текст справа */
+    .mainContainerSecond {
+        
+      flex-direction: row; /* в строку, чтобы изображение было слева */
+      height: auto; /* высоту делаем автоматической */
+    }
+  
+    /* Убрать второе изображение, оставить только одно слева */
+    /* Предположим, что у вас есть два блока с классом .middleImg, убираем последний */
+    /* Или если у вас только один блок, то ничего не делаем */
+  
+    /* Изображение занимает 35% ширины, расположено слева */
+    .middleImg {
+        margin-top: 30vh;
+      width: 35%;
+      height: 30vh;
+      margin-right: 20px; /* немного отступа справа */
+    }
+    .middleImg img {
+        
+        justify-content: center;
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+    }
+  
+    /* Текст занимает оставшуюся часть справа */
+    .listForSecond {
+      width: 65%;
+      margin-top: 0; /* убираем отступ сверху */
+      margin-left: 0;
+    }
+  
+    /* Размер шрифтов для читаемости */
+    .listForSecond ul li {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      float: none; /* убираем float, чтобы было адаптивно */
+    }
+  }
+  
+  
